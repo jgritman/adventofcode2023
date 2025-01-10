@@ -21,6 +21,7 @@ touch "$directory_name/Part2.kts"
 git add --all
 
 touch "$directory_name/sample_input.txt"
+
 url=https://adventofcode.com/2023/day/$1/input
 curl -o "$directory_name/input.txt" "$url" -H 'Cookie: session=53616c7465645f5fedbdc72260e39b973cf033fc25b99d3ed8b86576ce609afd0874f17c8f3e548afe2989444b532dc8c652c6dfdac8c79ab1b53b250fc00a0b'
 
