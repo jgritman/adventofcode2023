@@ -1,6 +1,6 @@
 import java.io.File
 
-val fileName = "input.txt"
+val fileName = args[0]
 
 fun processLine(line: String): Int {
     val first = line.first { it.isDigit() }
