@@ -52,7 +52,7 @@ fun extractNumber(digitChars: List<Char>): Int {
 }
 
 val sum = File(fileName).useLines { lines ->
-    val matrix = lines.map { it.toCharArray() }.toList() // Convert Sequence<CharArray> to List<CharArray>
+    val matrix = lines.map { it.toCharArray() }.toList()
     val gearMap = mutableMapOf<Pair<Int, Int>, MutableList<Int>>()
 
     matrix.forEachIndexed { rowIndex, _ -> processRow(rowIndex, matrix, gearMap) }

@@ -7,11 +7,9 @@ val numericDigits = (1..9).map { it.toString() }
 val allTokens = numericStrings + numericDigits
 
 fun processToken(token: String?): Int {
-    // Check if the token is null or if the first character is not a digit
     return if (token?.firstOrNull()?.isDigit() == true) {
         token.toInt()
     } else {
-        // Handle the null case by returning a default value or throwing an exception
         numericStrings.indexOf(token) + 1
     }
 }
@@ -22,7 +20,6 @@ fun processLine(line: String): Int {
     return "$first$last".toInt()
 }
 
-// Use lazy sequence to compute the sum
 val sum = File(fileName).useLines { lines ->
     lines.map { line -> processLine(line) }.sum()
 }

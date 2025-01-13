@@ -8,7 +8,6 @@ fun processLine(line: String): Int {
     return "$first$last".toInt()
 }
 
-// Use lazy sequence to compute the sum
 val sum = File(fileName).useLines { lines ->
     lines.map { line -> processLine(line) }.sum()
 }

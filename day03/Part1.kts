@@ -58,7 +58,7 @@ fun extractNumber(digitChars: List<Char>): Int {
 }
 
 val sumOfValid = File(fileName).useLines { lines ->
-    val matrix = lines.map { it.toCharArray() }.toList() // Convert Sequence<CharArray> to List<CharArray>
+    val matrix = lines.map { it.toCharArray() }.toList()
     matrix.withIndex().sumOf { (rowIndex, _) -> processRow(rowIndex, matrix) }
 }
 

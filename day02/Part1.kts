@@ -23,8 +23,8 @@ fun validGame(line: String): Boolean {
 
 val sum = File(fileName).useLines { lines ->
     lines.withIndex()
-        .filter { (_, line) -> validGame(line) } // Filter lines that meet the condition
-        .sumOf { (index, _) -> index + 1 } // Add index + 1 for matching lines
+        .filter { (_, line) -> validGame(line) }
+        .sumOf { (index, _) -> index + 1 }
 }
 
 println("Total sum: $sum")
